@@ -1,0 +1,58 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td.celula {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle; /* Corrige 'center' para o valor correto */
+    height: 40px;
+    width: 40px;
+    background-color: white; /* Define o fundo branco */
+}
+
+td.personagem {
+    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+    text-align: center; /* Alinha o conteúdo da célula ao centro */
+    padding: 0; /* Remove qualquer padding da célula */
+    width: 38px; /* Ajuste o tamanho da célula */
+    height: 38px;
+}
+
+td.personagem img {
+    width: 100%; /* Ajusta o GIF para preencher toda a célula */
+    height: 100%;
+    object-fit: contain; /* Garante que o GIF se ajuste sem distorção */
+}
+
+td.objetivo {
+    background-image: url('/images/porta.jfif'); /* Caminho para a imagem */
+    background-size: cover;
+    background-position: center;
+    color: rgb(31, 3, 3);
+}
+
+td.bloco {
+    background-color: rgb(109, 12, 91);
+    color: white;
+}
+
+.tempo-restante {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6D0C5B; /* Laranja vibrante */
+    background-color: #ffffff; /* Fundo escuro para contraste */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Efeito suave ao passar o mouse */
+}
