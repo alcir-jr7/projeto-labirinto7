@@ -11,35 +11,42 @@ O jogo foi desenvolvido utilizando Svelte, HTML, CSS e TypeScript, tecnologias q
 ✅ Detecção de colisões com paredes e obstáculos.
 ✅ Cronômetro para medir o tempo de conclusão do labirinto.
 ✅ Feedback ao jogador ao completar o jogo.
+
+
 🛠 Tecnologias Utilizadas
 Svelte: Framework para construção da interface do jogo.
 HTML & CSS: Para estruturação e estilização do projeto.
 TypeScript: Para adicionar tipagem e robustez ao código.
+
+
 🚀 Como Executar o Projeto
 Clone este repositório:
+
+Acesse o diretório do projeto:
 
 ```bash
 
 git clone url-do-repositorio
-Acesse o diretório do projeto:
 ```
+
+Instale as dependências:
 
 ```bash
-
 cd labirinto
-Instale as dependências:
 ```
+
+Execute o servidor de desenvolvimento:
 
 ```bash
 
 npm install
-Execute o servidor de desenvolvimento:
 ```
+
+Abra o navegador e acesse o endereço indicado (geralmente http://localhost:5173).
 
 ```bash
 
 npm run dev
-Abra o navegador e acesse o endereço indicado (geralmente http://localhost:5173).
 ```
 
 🎓 Equipe do Projeto
@@ -50,6 +57,8 @@ Jonatas Candido
 Luan Henrique
 Marília Gabriela
 Yara Regina
+
+
 📄 Licença
 Este é um projeto acadêmico e não possui uma licença específica. O uso do código é permitido para fins educacionais.
 
