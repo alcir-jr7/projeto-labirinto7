@@ -1,6 +1,6 @@
 <h1>Sobre</h1>
 
-<img class="sobre" src="/images/logoIFPE.png" alt="logo IPFE"/>
+<img class="sobre" src="/images/logoIFPEcor.png" alt="logo IPFE"/>
 
 <div class="quadro-autores">
   <p><strong>Autores:</strong></p>
