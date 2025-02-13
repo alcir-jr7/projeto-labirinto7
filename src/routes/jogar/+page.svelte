@@ -2,6 +2,18 @@
   import { goto } from '$app/navigation';
   import { onDestroy } from 'svelte';  // Importando para limpar o intervalo quando o componente for destruído
 
+  let audio:any;  // Variável para controlar o áudio
+  let musicaLigada = false;  // Controle de reprodução (se a música está ligada ou não)
+
+  // Função para alternar entre tocar e pausar a música
+  function alternarMusica() {
+    if (musicaLigada) {
+      audio.pause();  // Pausa o áudio
+    } else {
+      audio.play();  // Inicia o áudio
+    }
+    musicaLigada = !musicaLigada;  // Alterna o estado de música ligada/desligada
+  }
 
   class Coordenada {
       linha: number;
@@ -188,3 +200,16 @@
 <a class="menu" href="/" on:click|preventDefault={() => { limparTempo(); goto("/"); }}>VOLTAR AO MENU</a>
 
 <svelte:window on:keydown|preventDefault={onKeyDown} />
+
+<div class="configuracoes-som">
+    
+<button class="botao-som musica" on:click={alternarMusica}>
+    <img src="/images/nota.jpeg" alt="musica" class="{musicaLigada ? 'ativo' : 'desligado'}" />
+  </button>
+  
+  
+  <audio bind:this={audio} loop>
+    <source src="/audio/suspense.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+</div>
