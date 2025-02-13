@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
   import { onDestroy } from 'svelte';  // Importando para limpar o intervalo quando o componente for destruído
 
+
   class Coordenada {
       linha: number;
       coluna: number;
