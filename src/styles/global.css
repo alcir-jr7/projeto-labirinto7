@@ -59,7 +59,7 @@ img.sobre {
 	max-width:25%;
 	max-height:25%;
     padding: 10px; /* Espaçamento entre a imagem e o quadro */
-    background-color: rgba(219, 202, 202, 0.24); /* Preto com transparência */
+    background-color: rgba(109, 107, 107, 0.281); /* Preto com transparência */
     border: 3px solid #000000;
     border-radius: 8px; /* Opcional: arredonda os cantos */
     pointer-events: none; /* Impede que o quadro interfira em cliques */
@@ -73,7 +73,7 @@ img.sobre {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: rgba(219, 202, 202, 0.24); /* fundo opaco */
+    background-color: rgba(54, 54, 54, 0.24); /* fundo opaco */
     border: 3px solid #000000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@ img.sobre {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: rgba(219, 202, 202, 0.24); /* fundo opaco */
+    background-color: rgba(54, 54, 54, 0.24); /* fundo opaco */
     border: 3px solid #000000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
