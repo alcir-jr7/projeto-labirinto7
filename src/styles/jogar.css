@@ -5,19 +5,16 @@ table {
 }
 
 td.celula {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+    border: none;
     text-align: center;
     font-weight: bold;
     vertical-align: middle; /* Corrige 'center' para o valor correto */
     height: 40px;
     width: 40px;
-    background-color: white; /* Define o fundo branco */
+    background-image: url('/images/piso.PNG'); /* Define o fundo branco */
 }
 
 td.personagem {
-    background-color: rgb(228, 228, 228);
     cursor: pointer;
     text-align: center; /* Alinha o conteúdo da célula ao centro */
     padding: 0; /* Remove qualquer padding da célula */
@@ -39,9 +36,12 @@ td.objetivo {
 }
 
 td.bloco {
-    background-color: rgb(109, 12, 91);
-    color: white;
+    background-image: url('/images/parede.PNG');
+    background-size: cover; /* Faz a imagem cobrir todo o bloco */
+    background-repeat: no-repeat; /* Evita repetições */
+    border: none; /* Remove as bordas dos blocos */
 }
+
 
 .tempo-restante {
     font-size: 24px;
