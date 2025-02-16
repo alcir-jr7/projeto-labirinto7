@@ -9,8 +9,8 @@ td.celula {
     text-align: center;
     font-weight: bold;
     vertical-align: middle; /* Corrige 'center' para o valor correto */
-    height: 40px;
-    width: 40px;
+    height: 28px;
+    width: 28px;
     background-image: url('/images/piso.PNG'); /* Define o fundo branco */
 }
 
@@ -18,8 +18,8 @@ td.personagem {
     cursor: pointer;
     text-align: center; /* Alinha o conteúdo da célula ao centro */
     padding: 0; /* Remove qualquer padding da célula */
-    width: 38px; /* Ajuste o tamanho da célula */
-    height: 38px;
+    width: 26px; /* Ajuste o tamanho da célula */
+    height: 26px;
 }
 
 td.personagem img {
