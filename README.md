@@ -45,7 +45,7 @@ Acesse o diretório do projeto:
 
 ```bash
 
-cd meu-projeto-labirinto
+cd projeto-labirinto7
 ```
 
 Instale as dependências:
