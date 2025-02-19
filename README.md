@@ -62,7 +62,7 @@ Execute o servidor de desenvolvimento:
 npm run dev
 ```
 
-Abra o navegador e acesse o endereço indicado (geralmente http://localhost:5173):
+Abra o navegador e acesse o endereço indicado (geralmente http://localhost:5173)
 
 
 
