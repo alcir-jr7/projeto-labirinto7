@@ -142,12 +142,12 @@ img.sobre {
 
 .configuracoes-som {
     position: absolute;
-    bottom: 70px;
+    bottom: 150px; /* Aumentando o valor para subir os botões */
     right: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 10001; /* Garante que os botões fiquem sobre tudo */
+    z-index: 10001;
 }
 
 
@@ -160,7 +160,7 @@ img.sobre {
     padding: 0;
     cursor: pointer;
     overflow: hidden; /* Garante que os ícones não ultrapassem as bordas arredondadas */
-    box-shadow: 0 4px 6px rgb(1, 165, 206); /* Adiciona uma sombra suave */
+    box-shadow: 0 7px 10px rgb(1, 165, 206); /* Adiciona uma sombra suave */
     transition: box-shadow 0.3s ease;
 
 }
