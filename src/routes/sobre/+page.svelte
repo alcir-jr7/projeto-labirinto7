@@ -1,3 +1,8 @@
+<script lang="ts">
+  import { musicaLigada } from '$lib/musicStore';
+  import MusicToggle from '$lib/MusicToggle.svelte';
+</script>
+
 <h1>Sobre</h1>
 
 <img class="sobre" src="/images/logoIFPE.png" alt="logo IPFE"/>
@@ -15,5 +20,5 @@
 <a class="menu" href="/ia">USO DE IA</a>
 
 
-
+<MusicToggle />
 

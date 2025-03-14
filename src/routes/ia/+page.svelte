@@ -1,4 +1,9 @@
 <!-- Seção sobre o uso de IA -->
+<script lang="ts">
+    import { musicaLigada } from '$lib/musicStore';
+    import MusicToggle from '$lib/MusicToggle.svelte';
+  </script>
+
 <h1 class="">Uso de IA no Desenvolvimento do Projeto</h1>
 <div id="uso-ia" class="quadro-ia">
     <p>Durante o desenvolvimento do jogo "Escape the Maze", a equipe utilizou diversas Inteligências Artificiais como ferramentas de apoio para otimizar o trabalho e melhorar a qualidade do projeto.</p>
@@ -9,3 +14,4 @@
 
 <a class="menu" href="/sobre">VOLTAR</a>
 
+<MusicToggle />

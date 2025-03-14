@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { musicaLigada } from '$lib/musicStore';
   import MusicToggle from '$lib/MusicToggle.svelte';
 </script>
 
