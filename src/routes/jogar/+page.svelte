@@ -111,29 +111,29 @@
         let personagem: Personagem = new Personagem(0, 1);  
         let objetivo: Coordenada = new Coordenada();
         let mapa: number[][] = gerarLabirinto(10, 10);  
-        let tempoFase: number = 15;
+        let tempoFase: number = 20;
 
         objetivo.linha = 9;
         objetivo.coluna = 8;  
 
         if (fase === 2) {
             mapa = gerarLabirinto(12, 12);
-            tempoFase = 20;
+            tempoFase = 25;
             objetivo.linha = 11;
             objetivo.coluna = 10;
         } else if (fase === 3) {
             mapa = gerarLabirinto(15, 15);
-            tempoFase = 25;
+            tempoFase = 30;
             objetivo.linha = 14;
             objetivo.coluna = 13;
         } else if (fase === 4) {
             mapa = gerarLabirinto(18, 18);
-            tempoFase = 30;
+            tempoFase = 35;
             objetivo.linha = 17;
             objetivo.coluna = 16;
         } else if (fase === 5) {
             mapa = gerarLabirinto(20, 20);
-            tempoFase = 35;
+            tempoFase = 40;
             objetivo.linha = 19;
             objetivo.coluna = 18;
         }
