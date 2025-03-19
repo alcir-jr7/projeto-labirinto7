@@ -5,7 +5,9 @@
 
 <div class="quadro-conteudo">
   <img class="logo" src="/images/logogame.png" alt="logo IPFE" />
-  <a class="menu" href="/jogar">JOGAR</a>
+  <br>
+  <br>
+  <a class="menu" href="/menu">JOGAR</a>
   <br />
   <a class="menu" href="/sobre">SOBRE</a>
 </div>

@@ -16,8 +16,8 @@
   <p>Yara Regina | <a class="email" href="mailto:yrds@discente.ifpe.edu.br">yrds@discente.ifpe.edu.br</a></p>
 </div>
 
-<a class="menu" href="/">VOLTAR AO MENU</a>
 <a class="menu" href="/ia">USO DE IA</a>
+<a class="menu" href="/">VOLTAR AO MENU</a>
 
 
 <MusicToggle />

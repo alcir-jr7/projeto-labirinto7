@@ -11,6 +11,7 @@
     '/jogar': '/audio/suspense.mp3',  // Música para a página do jogo
     '/sobre': '/audio/aventura.mp3',  // Música para a página "sobre"
     '/ia': '/audio/esporte1.mp3',   // Música para a página "IA"
+    '/menu': '/audio/musicgame.mp3',
   } as const; // Garante que as chaves são literais fixas
 
   // Tipo para garantir que a chave seja uma das rotas do objeto

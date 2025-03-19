@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import { onMount, onDestroy } from 'svelte';
-    import MusicToggle from '$lib/MusicToggle.svelte'; // Importando o componente MusicToggle
+    import MusicToggle from '$lib/MusicToggle.svelte';
 
     class Coordenada {
         linha: number;
@@ -149,7 +149,7 @@
     }
 
     function onKeyDown(evento: { keyCode: any; }): void {
-        if (jogo.tempoAcabou) return; 
+        if (jogo.tempoAcabou || jogoPausado) return; // Não processa inputs se o jogo estiver pausado
 
         let direcao: string | null = null;
 
@@ -165,6 +165,9 @@
                 break;
             case 39: 
                 direcao = 'direita';
+                break;
+            case 27: // Tecla ESC para pausar/despausar
+                togglePause();
                 break;
         }
 
@@ -193,9 +196,9 @@
     }
 
     function diminuirTempo() {
-        if (jogo.tempoRestante > 0) {
+        if (!jogoPausado && jogo.tempoRestante > 0) {
             jogo.tempoRestante--;
-        } else if (!jogo.tempoAcabou) {
+        } else if (!jogo.tempoAcabou && jogo.tempoRestante <= 0) {
             jogo.tempoAcabou = true;
             alert("Tempo esgotado! Você perdeu a partida.");
             limparTempo();
@@ -207,19 +210,61 @@
         clearInterval(tempoInterval);
     }
 
+    // Sistema de pausa
+    let jogoPausado = false;
+    let tempoInterval: ReturnType<typeof setInterval>;
+    
+    function iniciarTempo() {
+        tempoInterval = setInterval(diminuirTempo, 1000);
+    }
+    
+    function togglePause() {
+        jogoPausado = !jogoPausado;
+        if (jogoPausado) {
+            clearInterval(tempoInterval);
+        } else {
+            iniciarTempo();
+        }
+    }
+
+    function reiniciarFase() {
+        jogo = inicializarJogo(jogo.fase);
+        jogoPausado = false;
+        iniciarTempo();
+    }
+
+    function voltarAoMenu() {
+        limparTempo();
+        goto("/");
+    }
+
     let jogo: EstadoJogo = inicializarJogo(1);
-    const tempoInterval = setInterval(diminuirTempo, 1000);
+    iniciarTempo();
 
     onDestroy(() => {
-        clearInterval(tempoInterval);
+        limparTempo();
     });
 </script>
 
+<svelte:window on:keydown|preventDefault={onKeyDown} />
+
 <h1>Escape the Maze - Fase {jogo.fase}</h1>
 
-<p class="tempo-restante">Tempo restante: {jogo.tempoRestante} segundos</p>
+<div class="game-header">
+    <p class="tempo-restante">Tempo restante: {jogo.tempoRestante} segundos</p>
+    <button on:click={togglePause}>{jogoPausado ? '▶' : '⏸'}</button>
+</div>
 
-<table>
+{#if jogoPausado}
+    <div class="menu-pausa">
+        <h2>Jogo Pausado</h2>
+        <button on:click={togglePause}>Continuar</button>
+        <button on:click={reiniciarFase}>Reiniciar Fase</button>
+        <button on:click={voltarAoMenu}>Voltar ao Menu</button>
+    </div>
+{/if}
+
+<table class={jogoPausado ? 'pausado' : ''}>
     {#each jogo.mapa as linha, i}
         <!-- svelte-ignore node_invalid_placement_ssr -->
         <tr>
@@ -238,8 +283,4 @@
 
 <br />
 
-<a class="menu" href="/" on:click|preventDefault={() => { limparTempo(); goto("/"); }}>VOLTAR AO MENU</a>
-
-<svelte:window on:keydown|preventDefault={onKeyDown} />
-
-<MusicToggle /> 
+<MusicToggle />
